@@ -14,4 +14,53 @@ h1 {
     color: #c94f7c;
     margin-bottom: 15px;
 }
+/* Formulário */
+.formulario {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
+/* Labels */
+.formulario label {
+    display: block;
+    margin-top: 10px;
+    color: #a64d79;
+    font-size: 14px;
+}
+
+/* Inputs */
+.formulario input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #f2b6c6;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Radios */
+.formulario input[type="radio"] {
+    width: auto;
+    margin-top: 10px;
+}
+
+/* Botão */
+.formulario button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ff7aa2;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #e85c8a;
+}

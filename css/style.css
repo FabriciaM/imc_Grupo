@@ -17,16 +17,15 @@ h1 {
 /* Formulário */
 .formulario {
     background-color: #fff;
-    padding: 25px;
+    padding: 40px;
     border-radius: 15px;
     width: 300px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: auto;
 }
 
 /* Labels */
-.formulario label {
-    display: block;
-    margin-top: 10px;
+    .formulario label {
     color: #a64d79;
     font-size: 14px;
 }
@@ -35,7 +34,7 @@ h1 {
 .formulario input {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
+    margin-bottom: 20px;
     border: 1px solid #f2b6c6;
     border-radius: 8px;
     outline: none;
@@ -44,7 +43,7 @@ h1 {
 /* Radios */
 .formulario input[type="radio"] {
     width: auto;
-    margin-top: 10px;
+    accent-color: #ff7aa2;
 }
 
 /* Botão */

@@ -1,0 +1,17 @@
+/* Fundo da página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fcd6e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #c94f7c;
+    margin-bottom: 15px;
+}
+

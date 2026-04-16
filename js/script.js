@@ -1,14 +1,15 @@
- const btn = document.getElementById("btn-calcular");
+ var btn = document.getElementById("btn-calcular");
+ var nome = document.getElementById("nome");
+ 
+ const data = document.getElementById("data");
+ const masc = document.getElementById("masculino");
+ const fem = document.getElementById("feminino");
+ let resul = document.getElementById("resultado");
 
-btn.addEventListener ('click', () => {
-    const nome = document.getElementById("nome");
-    const peso = document.getElementById("peso").value;
-    const altura = document.getElementById("altura").value;
-    const data = document.getElementById("data");
-    const masc = document.getElementById("masculino");
-    const fem = document.getElementById("feminino");
-    const resul = document.getElementById("resultado");
-    
-    const imc = peso / (altura * altura);
-    resul.innerHTML = (`O imc é: ${imc}`);
+btn.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    var peso = document.getElementById("peso");
+    var altura = document.getElementById("altura");
+    let imc = peso.value / (altura.value * altura.value);
+    resul.innerHTML = ("imc: " + imc.toFixed(2));
 });

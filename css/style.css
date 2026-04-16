@@ -15,7 +15,7 @@ h1 {
     margin-bottom: 15px;
 }
 /* Formulário */
-.formulario {
+.formulario, #resultado {
     background-color: #fff;
     padding: 40px;
     border-radius: 15px;
@@ -59,7 +59,16 @@ h1 {
     cursor: pointer;
     transition: 0.3s;
 }
-
+/* Botão (hover) */
 .formulario button:hover {
     background-color: #e85c8a;
 }
+/* Resultado     */
+#resultado {
+    margin-top: 20px;
+    text-align: start;
+    color: #c94f7c;
+    font-size: 18px;
+    border-left: 4px solid #ff7aa2;
+}
+

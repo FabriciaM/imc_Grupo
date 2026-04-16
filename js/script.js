@@ -11,5 +11,5 @@ btn.addEventListener('click', (event) => {
     var peso = document.getElementById("peso");
     var altura = document.getElementById("altura");
     let imc = peso.value / (altura.value * altura.value);
-    resul.innerHTML = ("imc: " + imc.toFixed(2));
+    resul.innerHTML = ("IMC: " + imc.toFixed(2));
 });

@@ -1,12 +1,22 @@
 /* Fundo da página */
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ffe4ec, #fcd6e3);
     display: flex;
+
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px 0;
+    overflow-y: auto;
+
 }
 /* Título */
 h1 {
@@ -22,6 +32,7 @@ h1 {
     width: 300px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     height: auto;
+    margin: 0 auto;
 }
 
 /* Labels */
@@ -60,6 +71,67 @@ h1 {
     transition: 0.3s;
 }
 
+
 .formulario button:hover {
     background-color: #e85c8a;
 }
+
+/* Botão (hover) */
+.formulario button:hover {
+    background-color: #e85c8a;
+}
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    text-align: left;
+    color: #000000;
+    font-size: 16px;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.resultado-item {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-left: 5px solid transparent;
+    width: 100%;
+}
+
+.resultado-item p {
+    margin: 6px 0;
+}
+
+.resultado-item strong {
+    color: #333;
+}
+
+.delete-btn {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #ff7aa2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #e85c8a;
+}
+
+.imc-abaixo { border-left-color: rgb(138, 1, 1); }
+.imc-normal { border-left-color: #57b96b; }
+.imc-sobrepeso { border-left-color: #f4b84d; }
+.imc-obesidade1 { border-left-color: #eb6f57; }
+.imc-obesidade2 { border-left-color: #d7656b; }
+.imc-obesidade3 { border-left-color: rgb(138, 1, 1); }
+
+

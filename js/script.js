@@ -1,3 +1,4 @@
+
 var btn = document.getElementById("btn-calcular");
 var nome = document.getElementById("nome");
 let form = document.querySelector(".formulario");
@@ -50,4 +51,5 @@ btn.addEventListener('click', (event) => {
     resul.innerHTML += `<br>Nome: ${nome.value} -- IMC: ${imc.toFixed(2)} -- Sexo: ${sexo.value} -- Idade: ${idade} anos -- Peso: ${peso.value} kg -- Altura: ${altura.value} m -- Situação: ${situacao}`;
     form.reset();
 });
+
 

@@ -48,8 +48,45 @@ btn.addEventListener('click', (event) => {
     }
     
     /* EXIBIÇÃO DOS RESULTADOS */
-    resul.innerHTML += `<br>Nome: ${nome.value} -- IMC: ${imc.toFixed(2)} -- Sexo: ${sexo.value} -- Idade: ${idade} anos -- Peso: ${peso.value} kg -- Altura: ${altura.value} m -- Situação: ${situacao}`;
+    let item = document.createElement('div');
+    item.className = 'resultado-item';
+
+    if (situacao === "Abaixo do peso") {
+        item.classList.add('imc-abaixo');
+    } else if (situacao === "Peso normal") {
+        item.classList.add('imc-normal');
+    } else if (situacao === "Sobrepeso") {
+        item.classList.add('imc-sobrepeso');
+    } else if (situacao === "Obesidade grau 1") {
+        item.classList.add('imc-obesidade1');
+    } else if (situacao === "Obesidade grau 2") {
+        item.classList.add('imc-obesidade2');
+    } else {
+        item.classList.add('imc-obesidade3');
+    }
+
+    item.innerHTML = `
+        <p><strong>Nome:</strong> ${nome.value}</p>
+        <p><strong>IMC:</strong> ${imc.toFixed(2)}</p>
+        <p><strong>Sexo:</strong> ${sexo.value}</p>
+        <p><strong>Idade:</strong> ${idade} anos</p>
+        <p><strong>Peso:</strong> ${peso.value} kg</p>
+        <p><strong>Altura:</strong> ${altura.value} m</p>
+        <p><strong>Situação:</strong> ${situacao}</p>
+    `;
+
+    let deleteBtn = document.createElement('button');
+    deleteBtn.type = 'button';
+    deleteBtn.className = 'delete-btn';
+    deleteBtn.textContent = 'Excluir';
+    deleteBtn.addEventListener('click', () => {
+        item.remove();
+    });
+
+    item.appendChild(deleteBtn);
+    resul.appendChild(item);
     form.reset();
 });
+
 
 

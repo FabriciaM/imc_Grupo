@@ -2,7 +2,7 @@
 var btn = document.getElementById("btn-calcular");
 var nome = document.getElementById("nome");
 let form = document.querySelector(".formulario");
-const data = document.getElementById("data");
+const data = document.getElementById("dataNascimento");
 let resul = document.getElementById("resultado");
 
 btn.addEventListener('click', (event) => {
@@ -85,7 +85,6 @@ btn.addEventListener('click', (event) => {
 
     item.appendChild(deleteBtn);
     resul.appendChild(item);
-    form.reset();
 });
 
 

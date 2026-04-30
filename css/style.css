@@ -129,6 +129,18 @@ h1 {
     font-size: 14px;
     transition: background-color 0.2s ease;
 }
+.alterar-btn{
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: #ff7aa2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    margin: 0 8px;
+}
 
 .delete-btn:hover {
     background-color: #e85c8a;

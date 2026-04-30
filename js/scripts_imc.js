@@ -12,6 +12,7 @@ btnCalcular.addEventListener('click', async (e) => {
     const formPessoa = new FormData(formImc);
 
     const objPessoa = {
+        idpessoa: sessionStorage.getItem('objPessoaId') === null ? 0: sessionStorage.getItem('objPessoaId'),
         nome: formPessoa.get('nome'),
         sexo: formPessoa.get('sexo'),
         dataNascimento: formPessoa.get('dataNascimento'),
@@ -19,10 +20,12 @@ btnCalcular.addEventListener('click', async (e) => {
         altura: parseFloat(formPessoa.get('altura'))
     }
 
-    if(sessionStorage.getItem('objPessoa') == null){ 
+    if(sessionStorage.getItem('objPessoaId') == null){ 
         cadastroPessoa(objPessoa)
     }else{
-        alert('alterar em desenvolvimento');
+        if(confirm('Deseja alterar os dados da pessoa?')){
+            alterarPessoa(objPessoa)
+        }
     }
 
     
@@ -93,6 +96,8 @@ const listarPessoas = async () => {
         alterar.textContent = 'Alterar';
         alterar.addEventListener('click', () => {
             carregaForm(pessoa);
+            window.location.href = '#titulo';
+            sessionStorage.setItem('objPessoaId', pessoa.idpessoa);
         });
         item.appendChild(alterar);
     });
@@ -144,6 +149,9 @@ const calcularIMC = (peso, altura) => {
 
         const alterarPessoa = async (objPessoa) => {
         const resultadoAlterar = await alterarDados(objPessoa);
+
+        sessionStorage.removeItem('objPessoaId');
+        listarPessoas();
     
         return resultadoAlterar;
 
